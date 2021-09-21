@@ -47,10 +47,10 @@ export default defineComponent({
             class="w-52 mx-auto mb-12"
             v-if="show"
             alt="Vitesome logo"
-            :src="'imagotype.svg'"
+            :src="'leaf.svg'"
         /></transition>
       </div>
-      <HelloWorld :msg="t('hello') + ' 👋 ' + t('welcome')"></HelloWorld>
+      <HelloWorld :msg="t('hello') + ' 👋 ' + t('welcome')"/>
       <footer class="text-center">
         <ul class="flex justify-between w-1/3 mx-auto mb-8">
           <li class="cursor-pointer text-2xl">
