@@ -6,7 +6,7 @@ const routes = [
     component: () => import('/@/pages/Index.vue'),
   },
   {
-    path: '/:language',
+    path: '/:language/',
     component: () => import('/@/pages/Index.vue'),
   },
 ];
