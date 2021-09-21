@@ -5,10 +5,6 @@ const routes = [
     path: '/',
     component: () => import('/@/pages/Index.vue'),
   },
-  {
-    path: '/:language/',
-    component: () => import('/@/pages/Index.vue'),
-  },
 ];
 
 export const Router = createRouter({
