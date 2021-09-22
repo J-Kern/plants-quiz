@@ -1,6 +1,6 @@
 <template>
   <div id="the-background" class="bg-cover" style="background-image: url('bg.jpg');">
-    <div class="dark:bg-dark bg-white rounded-xl m-50 p-4 glass-morphism">Hello</div>
+    <div class="dark:bg-black bg-white rounded-xl m-50 p-4 glass-morphism">Hello</div>
   </div>
 </template>
 
