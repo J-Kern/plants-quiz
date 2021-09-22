@@ -50,7 +50,6 @@ export default defineComponent({
             :src="'leaf.svg'"
         /></transition>
       </div>
-      <HelloWorld :msg="t('hello') + ' 👋 ' + t('welcome')"/>
       <footer class="text-center">
         <ul class="flex justify-between w-1/3 mx-auto mb-8">
           <li class="cursor-pointer text-2xl">
@@ -83,7 +82,7 @@ export default defineComponent({
           </li>
         </ul>
         <span class="text-xs"
-          >{{ t("made_by") }} |<a
+          >{{ t("made_by") }} | <a
             class="footer-link text-cyan-400 hover:text-cyan-500"
             href="https://github.com/alvarosaburido"
             rel="noreferrer"

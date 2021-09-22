@@ -4,6 +4,9 @@ import typography from 'windicss/plugin/typography';
 export default defineConfig({
   darkMode: 'class',
   plugins: [typography()],
+  shortcuts: {
+    'glass-morphism': '!bg-clip-padding !backdrop-filter !backdrop-blur-xl bg-opacity-60 border border-gray-200'
+  },
   theme: {
     fontFamily: {
       sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],

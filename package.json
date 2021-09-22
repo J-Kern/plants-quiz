@@ -1,5 +1,5 @@
 {
-  "name": "Vite-Template",
+  "name": "plants-quiz",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -11,7 +11,8 @@
     "pug": "^3.0.2",
     "vue": "^3.2.6",
     "vue-i18n": "^9.2.0-beta.3",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@iconify/iconify": "^2.0.3",
