@@ -1,7 +1,6 @@
 <template>
-  <div id="the-background" class="bg-cover" style="background-image: url('bg.jpg');">
-    <div class="dark:bg-black bg-white rounded-xl m-50 p-4 glass-morphism">Hello</div>
-  </div>
+  <div id="the-background" class="bg-cover" :style="{backgroundImage:`url(@/assets/bg.jpg)`}"></div>
+<!--  <div id="the-background" class="bg-cover"></div>-->
 </template>
 
 <script lang="js">
@@ -18,7 +17,7 @@
       },
     methods: {
       init() {
-        let container = document.getElementById('container');
+        let container = document.getElementById('the-background');
 
         this.camera = new Three.PerspectiveCamera(70, container.clientWidth/container.clientHeight, 0.01, 10);
         this.camera.position.z = 1;
@@ -48,6 +47,7 @@
 
 <style scoped>
 #the-background {
-  @apply absolute inset-0 -z-10 w-full h-full
+  background-image: require('@/assets/bg.jpg');
+  @apply absolute inset-0 -z-10 w-full h-full;
 }
 </style>

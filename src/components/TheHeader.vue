@@ -13,21 +13,24 @@ export default defineComponent({
 </script>
 <template lang="pug">
 .the-header
-  div.flex.align-center.justify-around.py-1.px-2
-    h3
+  div.flex.align-center.justify-between.py-1.px-2
+    h3.px-3.rounded-xl.bg-gray-600
+      | Hello World!
+  div.flex.align-center.justify-between.py-1.px-2.min-w-80
+    h3.px-3.rounded-xl.bg-gray-600
+      | Hello World!
+    h3.px-3.rounded-xl.bg-gray-600
       | Hello World!
 </template>
-
-<style scoped>
-a {
-  @apply text-cyan-400 hover:text-cyan-500 transition-all ease-out duration-100;
-}
-</style>
 
 <style scoped>
 label {
   margin: 0 0.5em;
   font-weight: bold;
+}
+
+a {
+  @apply text-cyan-400 hover:text-cyan-500 transition-all ease-out duration-100;
 }
 
 code {

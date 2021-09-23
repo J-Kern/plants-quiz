@@ -19,7 +19,7 @@ export default defineComponent({
 
     setTimeout(() => {
       show.value = true;
-    }, 1000);
+    }, 500);
 
     return { t, show, toggleLocales, toggleDark };
   },
@@ -27,13 +27,13 @@ export default defineComponent({
 </script>
 <template>
   <div class='w-screen mx-auto'>
-    <div class='container max-w-3xl mx-auto'>
+    <div class='container max-w-3xl mx-auto my-8 p-8 rounded-2xl dark:bg-gray-800 bg-white glass-morphism'>
       <div class='h-60 my-8'>
         <transition
-          enter-active-class='transition ease-out duration-1000 transform'
-          enter-from-class='-translate-x-100 opacity-0'
-          enter-to-class='translate-x-0 opacity-100'
-          leave-active-class='transition ease-in duration-1000 transform'
+          enter-active-class='transition ease-out duration-300 transform'
+          enter-from-class='opacity-0'
+          enter-to-class='opacity-100'
+          leave-active-class='transition ease-in duration-300 transform'
           leave-from-class='opacity-100'
           leave-to-class='opacity-0'
         ><img
