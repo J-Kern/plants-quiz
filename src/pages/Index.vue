@@ -1,16 +1,10 @@
-<script lang="ts">
-import { useI18n } from "vue-i18n";
-
-import { defineComponent, ref } from "vue";
-import { useTheme } from "/@/composables";
-
-import TheHeader from "/@/components/TheHeader.vue";
+<script lang='ts'>
+import { useI18n } from 'vue-i18n';
+import { defineComponent, ref } from 'vue';
+import { useTheme } from '/@/composables';
 
 export default defineComponent({
-  name: "Home",
-  components: {
-    TheHeader,
-  },
+  name: 'Home',
   setup() {
     const { t, availableLocales, locale } = useI18n();
 
@@ -32,64 +26,51 @@ export default defineComponent({
 });
 </script>
 <template>
-  <div class="w-screen mx-auto">
-    <TheHeader />
-    <div class="container max-w-3xl mx-auto">
-      <div class="h-60 my-8">
+  <div class='w-screen mx-auto'>
+    <div class='container max-w-3xl mx-auto'>
+      <div class='h-60 my-8'>
         <transition
-          enter-active-class="transition ease-out duration-1000 transform"
-          enter-from-class="-translate-x-100 opacity-0"
-          enter-to-class="translate-x-0 opacity-100"
-          leave-active-class="transition ease-in duration-1000 transform"
-          leave-from-class="opacity-100"
-          leave-to-class="opacity-0"
-          ><img
-            class="w-52 mx-auto mb-12"
-            v-if="show"
-            alt="Vitesome logo"
-            :src="'leaf.svg'"
+          enter-active-class='transition ease-out duration-1000 transform'
+          enter-from-class='-translate-x-100 opacity-0'
+          enter-to-class='translate-x-0 opacity-100'
+          leave-active-class='transition ease-in duration-1000 transform'
+          leave-from-class='opacity-100'
+          leave-to-class='opacity-0'
+        ><img
+          class='w-52 mx-auto mb-12'
+          v-if='show'
+          alt='Big Leaf'
+          :src="'leaf.svg'"
         /></transition>
       </div>
-      <footer class="text-center">
-        <ul class="flex justify-between w-1/3 mx-auto mb-8">
-          <li class="cursor-pointer text-2xl">
+      <footer class='text-center'>
+        <ul class='flex justify-between w-1/3 mx-auto mb-8'>
+          <li class='cursor-pointer text-2xl'>
             <a
-              class="footer-link text-cyan-700 hover:text-cyan-500"
-              href="#"
-              @click="toggleLocales"
+              class='footer-link text-cyan-700 hover:text-cyan-500'
+              href='#'
+              @click='toggleLocales'
               :title="t('toggle_language')"
-              ><i class="iconify" :data-icon="'ant-design:translation-outlined'"></i
+            ><i class='iconify' :data-icon="'ant-design:translation-outlined'"></i
             ></a>
           </li>
-          <li class="cursor-pointer text-2xl">
+          <li class='cursor-pointer text-2xl'>
             <a
-              class="text-cyan-700 hover:text-cyan-500"
-              href="#"
-              @click="toggleDark"
+              class='text-cyan-700 hover:text-cyan-500'
+              href='#'
+              @click='toggleDark'
               :title="t('toggle_theme')"
-              ><i class="iconify" :data-icon="'mdi:theme-light-dark'"></i
-            ></a>
-          </li>
-          <li class="cursor-pointer text-2xl">
-            <a
-              class="footer-link text-cyan-700 hover:text-cyan-500"
-              href="https://github.com/alvarosaburido"
-              rel="noreferrer"
-              target="_blank"
-              title="Github repo"
-              ><i class="iconify" :data-icon="'mdi:github'"></i
+            ><i class='iconify' :data-icon="'mdi:theme-light-dark'"></i
             ></a>
           </li>
         </ul>
-        <span class="text-xs"
-          >{{ t("made_by") }} | <a
-            class="footer-link text-cyan-400 hover:text-cyan-500"
-            href="https://github.com/alvarosaburido"
-            rel="noreferrer"
-            target="_blank"
-            >Joachim Kern</a
-          ></span
-        >
+        <span class='text-xs'
+        >{{ t('made_by') }} | <a
+          class='footer-link text-cyan-400 hover:text-cyan-500'
+          href='https://github.com/alvarosaburido'
+          rel='noreferrer'
+          target='_blank'
+        >Joachim Kern</a></span>
       </footer>
     </div>
   </div>

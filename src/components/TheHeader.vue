@@ -12,9 +12,10 @@ export default defineComponent({
 });
 </script>
 <template lang="pug">
-.w-full.bg-gradient-to-r.from-green-500.to-green-900.p-8.m-0
-  h1.text-center
-    | Hello World!
+.the-header
+  div.flex.align-center.justify-around.py-1.px-2
+    h3
+      | Hello World!
 </template>
 
 <style scoped>
@@ -31,5 +32,9 @@ label {
 
 code {
   @apply text-xs font-mono bg-yellow-200 text-yellow-700 rounded px-0.5 py-0.5;
+}
+
+.the-header {
+  @apply  w-full flex align-center justify-between bg-gradient-to-r from-green-500 to-green-900 p-8 m-0 !dark:text-white text-black;
 }
 </style>
