@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 <template>
   <TheBackground />
-  <TheHeader />
+  <TheHeader id='the-header'/>
     <router-view v-slot='{ Component, route }'>
       <transition :name="route.meta.transition || 'fade'"
         enter-active-class='transition ease-out duration-500 transform'
@@ -27,3 +27,9 @@ export default defineComponent({
       </transition>
     </router-view>
 </template>
+
+<style scoped>
+#the-header {
+  @apply w-full flex align-center justify-between bg-gradient-to-r from-green-500 to-green-900 p-8 m-0 !dark:text-white text-black transition-all;
+}
+</style>

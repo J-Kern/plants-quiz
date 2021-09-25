@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Vite-Template.iml" filepath="$PROJECT_DIR$/.idea/Vite-Template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../plant-quiz/.idea/plant-quiz.iml" filepath="$PROJECT_DIR$/../plant-quiz/.idea/plant-quiz.iml" />
     </modules>
   </component>
 </project>
