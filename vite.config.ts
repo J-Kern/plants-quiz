@@ -31,7 +31,7 @@ export default defineConfig({
     // vhttps://github.com/stafyniaksacha/vite-plugin-fonts#readme
     ViteFonts({
       google: {
-        families: ['Open Sans', 'Montserrat', 'Fira Sans'],
+        families: ['Open Sans', 'Montserrat', 'Fira Sans', 'Sacramento', 'Monofett', 'Rouge Script', 'Pacifico'],
       },
     }),
 

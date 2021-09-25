@@ -1,6 +1,6 @@
 <template>
-  <div id="the-background" class="bg-cover" :style="{backgroundImage:`url(@/assets/bg.jpg)`}"></div>
-<!--  <div id="the-background" class="bg-cover"></div>-->
+<!--  <div id="the-background" class="bg-cover" :style="{backgroundImage:`url(@/assets/bg.jpg)`}"></div>-->
+  <div id="the-background" class="bg-cover"></div>
 </template>
 
 <script lang="js">
@@ -48,6 +48,6 @@
 <style scoped>
 #the-background {
   background-image: require('@/assets/bg.jpg');
-  @apply absolute inset-0 -z-10 w-full h-full;
+  @apply absolute inset-0 -z-10 w-full h-full transition-all duration-500 dark:bg-gray-800 bg-gray-200
 }
 </style>

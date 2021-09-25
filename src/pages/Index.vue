@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 <template>
   <div class='w-screen mx-auto'>
-    <div class='container max-w-3xl mx-auto my-8 p-8 rounded-2xl dark:bg-gray-800 bg-white glass-morphism'>
+    <div class='container max-w-3xl mx-auto my-8 p-8 rounded-2xl dark:bg-gray-800 dark:shadow-3xl bg-white glass-morphism transition-all'>
       <div class='h-60 my-8'>
         <transition
           enter-active-class='transition ease-out duration-300 transform'
@@ -49,7 +49,7 @@ export default defineComponent({
             <a
               class='footer-link text-cyan-700 hover:text-cyan-500'
               href='#'
-              @click='toggleLocales'
+              @click.prevent='toggleLocales'
               :title="t('toggle_language')"
             ><i class='iconify' :data-icon="'ant-design:translation-outlined'"></i
             ></a>
@@ -58,7 +58,7 @@ export default defineComponent({
             <a
               class='text-cyan-700 hover:text-cyan-500'
               href='#'
-              @click='toggleDark'
+              @click.prevent='toggleDark'
               :title="t('toggle_theme')"
             ><i class='iconify' :data-icon="'mdi:theme-light-dark'"></i
             ></a>
@@ -67,7 +67,7 @@ export default defineComponent({
         <span class='text-xs'
         >{{ t('made_by') }} | <a
           class='footer-link text-cyan-400 hover:text-cyan-500'
-          href='https://github.com/alvarosaburido'
+          href='https://github.com/J-Kern'
           rel='noreferrer'
           target='_blank'
         >Joachim Kern</a></span>
