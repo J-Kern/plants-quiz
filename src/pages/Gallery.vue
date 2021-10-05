@@ -4,7 +4,7 @@ import { defineComponent, ref } from 'vue';
 import { useTheme } from '/@/composables';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'Gallery',
   setup() {
     const { t, availableLocales, locale } = useI18n();
 
@@ -35,7 +35,8 @@ export default defineComponent({
       my-8
       p-8
       rounded-2xl
-      dark:bg-gray-800 dark:shadow-3xl
+      dark:bg-gray-800
+      dark:shadow-3xl
       bg-white
       glass-morphism glass-border
       transition-all

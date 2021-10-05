@@ -31,9 +31,9 @@ export default defineComponent({
 });
 </script>
 <template>
-  <div id='the-header' :class="{ 'shadow-2xl': !view.atTopOfPage, 'glass-morphism': view.atTopOfPage }">
+  <div id='the-header' :class="{ 'shadow-2xl rounded-b-3xl': !view.atTopOfPage, 'glass-morphism rounded-b': view.atTopOfPage }" class='sticky top-0'>
     <div class='flex align-center justify-between py-1 px-2'>
-      <h3 class='px-3 rounded-xl bg-gray-200'>Hello World!</h3>
+      <h3 class='px-3 rounded-xl bg-gray-200'>{{t('home')}}</h3>
     </div>
     <div class='flex flex-wrap align-center justify-between py-1 px-2 min-w-80'>
       <h3 class='px-3 rounded-xl bg-gray-200'>Hello World!</h3>

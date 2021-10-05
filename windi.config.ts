@@ -5,7 +5,8 @@ export default defineConfig({
   darkMode: 'class',
   plugins: [typography()],
   shortcuts: {
-    'glass-morphism': '!bg-clip-padding !backdrop-filter !backdrop-blur-xl bg-opacity-80 border !dark:border-gray-700 border-gray-200'
+    'glass-morphism': '!bg-clip-padding !backdrop-filter !backdrop-blur-xl bg-opacity-80',
+    'glass-border': 'border !dark:border-gray-700 border-gray-200',
   },
   theme: {
     fontFamily: {
