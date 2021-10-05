@@ -1,21 +1,21 @@
 <template>
-  <div id="the-background" class="bg-cover" :style="{backgroundImage:`url(@/assets/bg.jpg)`}"></div>
-  <!-- <div id="the-background"></div> -->
+<!--  <div id="the-background" class="bg-cover" style="background-image:url('./static/assets/bg.jpg')"></div>-->
+   <div id="the-background"></div>
 </template>
 
 <script lang="js">
-import * as Three from 'three'
+//import * as Three from 'three'
 
 export default {
   name: "TheBackground",
-  // data() {
-  //     return {
-  //       camera: null,
-  //       scene: null,
-  //       renderer: null,
-  //       mesh: null
-  //     };
-  //   },
+  data() {
+      return {
+        camera: null,
+        scene: null,
+        renderer: null,
+        mesh: null
+      };
+    },
   // methods: {
   //   init() {
   //     let container = document.getElementById('the-background');

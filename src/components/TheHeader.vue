@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useTheme } from '/@/composables';
 
 export default defineComponent({
   name: 'TheHeader',
@@ -23,21 +24,44 @@ export default defineComponent({
       }
     }
   },
-  setup: () => {
-    const { t } = useI18n();
-    
-    return { t };
+  setup() {
+    const { t, availableLocales, locale } = useI18n();
+
+    const toggleLocales = () => {
+      const locales = availableLocales;
+      locale.value =
+        locales[(locales.indexOf(locale.value) + 1) % locales.length];
+    };
+
+    const { toggleDark } = useTheme();
+
+    return { t, toggleLocales, toggleDark };
   },
 });
 </script>
 <template>
   <div id='the-header' :class="{ 'shadow-2xl rounded-b-3xl': !view.atTopOfPage, 'glass-morphism rounded-b': view.atTopOfPage }" class='sticky top-0'>
-    <div class='flex align-center justify-between py-1 px-2'>
-      <h3 class='px-3 rounded-xl bg-gray-200'>{{t('home')}}</h3>
+    <div class='flex align-center justify-between'>
+      <h3 class='p-4 rounded-xl bg-gray-200 font-heading text-4xl'>{{t('home')}}</h3>
     </div>
-    <div class='flex flex-wrap align-center justify-between py-1 px-2 min-w-80'>
-      <h3 class='px-3 rounded-xl bg-gray-200'>Hello World!</h3>
-      <h3 class='px-3 rounded-xl bg-gray-200'>Hello World!</h3>
+    <div class='flex flex-wrap align-center justify-around px-2 min-w-80'>
+      <a
+        class="text-green-700 hover:text-green-500 text-2xl"
+        href="#"
+        @click.prevent="toggleLocales"
+        :title="t('toggle_language')"
+      ><i
+        class="iconify"
+        :data-icon="'ant-design:translation-outlined'"
+      ></i
+      ></a>
+      <a
+        class="text-cyan-700 hover:text-cyan-500 text-2xl"
+        href="#"
+        @click.prevent="toggleDark"
+        :title="t('toggle_theme')"
+      ><i class="iconify" :data-icon="'mdi:theme-light-dark'"></i
+      ></a>
     </div>
   </div>
 </template>

@@ -12,7 +12,6 @@ export default defineComponent({
 });
 </script>
 <template>
-  <TheBackground />
   <TheHeader id='the-header'/>
   <div class='w-full mx-auto'>
     <router-view v-slot='{ Component, route }'>
@@ -28,6 +27,7 @@ export default defineComponent({
       </transition>
     </router-view>
   </div>
+  <TheBackground />
 </template>
 
 <style scoped>
